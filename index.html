@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/b6ab99e018.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="./img/logo3.png" width="135px" class="logo" alt="" />
+          <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <p>Frontend-Web Developer</p>
+          <h1>Hi I'm <span style="color: orange">Pawan Kumar</span></h1>
+          <a
+            href="https://www.linkedin.com/in/pawan-kumar-singh4527"
+            class="exp"
+            >Let's Connect</a
+          >
+        </div>
+      </div>
+    </div>
+    <div id="About">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="img/avatar-icon-images-4.png" alt="" />
+          </div>
+          <div class="about-col-2">
+            <h2 class="sub-title">About-Me</h2>
+            <p>
+              "As a dedicated and ambitious individual, I have recently made the
+              decision to transition into the IT field as a web developer. While
+              my previous experience has been in different fields, my love for
+              technology and my proficiency in
+              <b style="color: orange">
+                HTML, CSS, Bootstrap, and JavaScript
+              </b>
+              have driven me towards this career change. I am eager to apply my
+              skills and learn from experienced professionals to create
+              innovative solutions that drive success for both myself and the
+              companies I work for. I believe that a strong work ethic, a
+              willingness to learn, and a passion for technology will enable me
+              to excel in this field and make valuable contributions to the
+              industry."
+            </p>
+            <div class="tab-title">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li>
+                  <span>Web Development</span><br />HTML <br />
+                  CSS <br />
+                  Bootstrap <br />
+                  JavaScript
+                </li>
+                <li><span>Wordpress</span><br />Wordpress-Development</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li><span>Feb - 2023</span><br />Oasis-Infobyte Intern</li>
+                <li><span>Nov - 2022</span><br />Spotify clone</li>
+                <li><span>Oct - 2022</span><br />Digital Clock</li>
+                <li>
+                  <span>July - 2022-Dec - 2022</span><br />PrepBytes
+                  Web-Development Training
+                </li>
+                <li>
+                  <span>Apr - 2021-Jun - 2022</span><br />Civil site Engineer
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>2016 - 2020</span><br />B.tech Civil Engineering</li>
+                <li><span>2013 - 2015</span><br />Intermediate</li>
+                <li><span>Mar - 2013</span><br />Matric</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h2 class="sub-title">Contact me</h2>
+            <p>
+              <i class="fa-solid fa-paper-plane"></i>pawankumar4527@gmail.com
+            </p>
+            <p><i class="fa-solid fa-phone"></i>+919740615510</p>
+            <div class="social-icons">
+              <a
+                href="https://www.facebook.com/profile.php?id=100009559003781&mibextid=ZbWKwL"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a href="https://instagram.com/singhpawan4527?igshid=ZDdkNTZiNTM="
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a
+                href="https://twitter.com/pawansingh_4527?t=K6zuAfY5tGYBx9PC-cP64Q&s=09"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+              <a href="https://www.linkedin.com/in/pawan-kumar-singh4527"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </div>
+            <a class="btn" href="img/Pawan's Resume (L).pdf" download
+              >Download CV</a
+            >
+          </div>
+          <div class="contact-right">
+            <form>
+              <input type="text" name="Name" placeholder="Name" required />
+              <input type="email" name="Email" placeholder="Email" required />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your Message"
+              ></textarea>
+              <button type="submit" class="btn">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+  </body>
+</html>
